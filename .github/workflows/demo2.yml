@@ -18,7 +18,6 @@ jobs:
 
   # This workflow contains a single job called "build"
   job1:
-  needs: job
     # The type of runner that the job will run on
     # runs-on: self-hosted
     runs-on: ubuntu-latest
@@ -38,7 +37,7 @@ jobs:
   job2:
   needs: job1
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,7 +46,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo I am windows
+        run: echo I am ubuntu
   
   # job3:
   #   # The type of runner that the job will run on
